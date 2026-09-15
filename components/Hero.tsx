@@ -17,7 +17,7 @@ export default function Hero() {
             <p className="text-xs text-muted">Adelaide, South Australia</p>
 
             <h1 className="mt-6 text-[2.5rem] leading-[1.1] tracking-tight text-ink sm:text-6xl">
-            Ten years in business & finance.
+            Ten years in business & creative.
             <br />
             Now I build{" "}
             <span className="bg-[linear-gradient(100deg,var(--color-past)_0%,var(--color-future)_100%)] bg-clip-text text-transparent">
