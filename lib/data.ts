@@ -20,7 +20,7 @@ export type EducationItem = {
   description: string;
 };
 
-// Ordered oldest to newest — this is a genuine chronological history, not decoration.
+// Ordered newest to oldest
 export const education: EducationItem[] = [
     {
     period: "Jan 2026 — Feb 2027",
@@ -57,7 +57,7 @@ export type ExperienceItem = {
   description: string;
 };
 
-// Oldest to newest
+// Newest to Oldest 
 export const experience: ExperienceItem[] = [
     {
     period: "Apr 2025 — Current",
@@ -147,3 +147,10 @@ export const projects: Project[] = [
   },
 ];
 
+export const socials = {
+    email: "vinhhung90@gmail.com",
+    facebook: "https://www.facebook.com/Tran.Ba.Vinh.Hung",
+    github: "https://github.com/hardytran90",
+    linkedin: "https://www.linkedin.com/in/hardy-tran/",
+    discord: "https://discord.com/users/hardy_tran",
+};
