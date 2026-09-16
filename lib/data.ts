@@ -7,9 +7,9 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/hardy-tran/",
   tagline: "Ten years in business & creative. Now I build software.",
   bio: [
-    "I started my career in banking, spent six years in Ho Chi Minh City planning travel and conference events for corporate clients, then moved to Adelaide to study a Master of Computing and Innovation at the University of Adelaide.",
-    "That mix is unusual, but it works in my favour: I've managed budgets and stakeholders under real deadline pressure, and I now pair that with hands-on skills in JavaScript, Python, C#, SQL and cloud platforms like AWS and Azure.",
-    "I'm currently completing a Professional Year in Adelaide while looking for a role in software development or DevOps, where I can keep building things that are used by real people under real constraints.",
+    "I started my career in banking and finance, spent next six years in creative & event area, and traveled around Vietnam. I moved to Adelaide to start new career in technology.",
+    "That mix is unusual, but it works in my favour: I've managed budgets and stakeholders under real deadline pressure, and I now pair that with hands-on skills in Python, JavaScript, C#, SQL and cloud platforms like MS Azure.",
+    "I'm currently completing Professional Year program in Adelaide while looking for a role in Software Engineer or Web Development, where I can keep building things that are used by real people under real constraints.",
   ],
 };
 
@@ -88,8 +88,8 @@ export type SkillGroup = {
 };
 
 export const skillGroups: SkillGroup[] = [
-  { label: "Languages", items: ["JavaScript", "Python", "C#", "SQL", ".NET", "HTML"] },
-  { label: "Cloud", items: ["AWS", "Microsoft Azure"] },
+  { label: "Languages", items: ["Python", "JavaScript", "C#", "SQL", ".NET", "HTML"] },
+  { label: "Cloud", items: ["Microsoft Azure"] },
   { label: "Systems", items: ["Linux", "macOS"] },
   { label: "Tools", items: ["MS Office", "Adobe Photoshop", "Final Cut Pro"] },
 ];
@@ -146,3 +146,4 @@ export const projects: Project[] = [
       "A self-directed build outside of coursework, currently in progress. Details land here once it's live.",
   },
 ];
+
