@@ -1,14 +1,13 @@
 export const profile = {
   name: "Hardy Tran",
   location: "Adelaide, SA",
-  phone: "0402 060 797",
   email: "vinhhung90@gmail.com",
   // TODO: paste your real LinkedIn URL here — the CV only listed a placeholder link.
   linkedin: "https://www.linkedin.com/in/hardy-tran/",
-  tagline: "Ten years in business & creative. Now I build software.",
+  tagline: "Ten years in business & creative. Now I build softwares.",
   bio: [
     "I started my career in banking and finance, spent next six years in creative & event area, and traveled around Vietnam. I moved to Adelaide to start new career in technology.",
-    "That mix is unusual, but it works in my favour: I've managed budgets and stakeholders under real deadline pressure, and I now pair that with hands-on skills in Python, JavaScript, C#, SQL and cloud platforms like MS Azure.",
+    "That mix is unusual, but it works in my favour: I've managed budgets and stakeholders under real deadline pressure, and I now pair that with hands-on skills in Python, JavaScript, C#, SQL and cloud platform with MS Azure.",
     "I'm currently completing Professional Year program in Adelaide while looking for a role in Software Engineer or Web Development, where I can keep building things that are used by real people under real constraints.",
   ],
 };
@@ -16,38 +15,43 @@ export const profile = {
 export type EducationItem = {
   period: string;
   title: string;
-  org: string;
+  level: string;
   description: string;
+  logo: string;
 };
 
 // Ordered newest to oldest
 export const education: EducationItem[] = [
     {
-    period: "Jan 2026 — Feb 2027",
-    title: "Professional Year",
-    org: "Performance Education, Adelaide",
+    period: "Jan 2026 - Feb 2027 -- Australia",
+    level: "Professional Year Program",
+    title: "Performance Education",
     description:
       "Australian business culture, workplace skills and professional communication, ahead of moving into a software or DevOps role.",
+    logo: "/logos/logo-pe.png",
   },
   {
-    period: "Feb 2024 — Dec 2025",
-    title: "Master of Computing and Innovation",
-    org: "University of Adelaide, Australia",
+    period: "Feb 2024 - Dec 2025 -- Australia",
+    level: "Master of Computing and Innovation",
+    title: "University of Adelaide",
     description:
       "Focused on the foundations of software and computing, including the two applied projects below.",
-  },
+    logo: "/logos/logo-adelaide-uni.png",
+    },
   {
-    period: "2011 — 2013",
-    title: "Bachelor of Business Administration",
-    org: "Ho Chi Minh City Open University, Vietnam",
+    period: "2011 - 2013 -- Vietnam",
+    level: "Bachelor of Business Administration",
+    title: "Ho Chi Minh City Open University",
     description: "Focus on business markets and the banking industry.",
-  },
+    logo: "/logos/open-uni.png",
+},
   {
-    period: "2008 — 2011",
-    title: "Diploma of Business Administration",
-    org: "University of Finance – Marketing, Vietnam",
+    period: "2008 - 2011 -- Vietnam",
+    level: "Diploma of Business Administration",
+    title: "University of Finance & Marketing",
     description: "Foundation coursework in business and finance management.",
-  },
+    logo: "/logos/logo-marketing-uni.png",
+},
 ];
 
 export type ExperienceItem = {
@@ -82,16 +86,46 @@ export const experience: ExperienceItem[] = [
   },
 ]
 
+export type SkillItem = {
+  name: string;
+  slug?: string;
+  logo?: string;
+}
+
 export type SkillGroup = {
   label: string;
-  items: string[];
+  items: SkillItem[];
 };
 
 export const skillGroups: SkillGroup[] = [
-  { label: "Languages", items: ["Python", "JavaScript", "C#", "SQL", ".NET", "HTML"] },
-  { label: "Cloud", items: ["Microsoft Azure"] },
-  { label: "Systems", items: ["Linux", "macOS"] },
-  { label: "Tools", items: ["MS Office", "Adobe Photoshop", "Final Cut Pro"] },
+  { label: "Languages", 
+    items: [
+        { name: "Python", slug: "python" },
+        { name: "JavaScript", slug: "javascript" },
+        { name: "C#", logo: "/logos/csharp.svg" },
+        { name: "SQL", slug: "mysql" },
+        { name: ".NET", slug: "dotnet" },
+        { name: "HTML", slug: "html5" },
+    ],},
+  { label: "Cloud", 
+    items: [
+        { name: "MS Azure", logo: "/logos/microsoft-azure.svg" }
+    ],},
+  { label: "Systems", 
+    items: [
+        { name: "Linux", slug: "linux" },
+        { name: "macOS", logo: "/logos/mac-os.svg" }
+    ],},
+  { label: "Tools", 
+    items: [
+        { name:  "Github", logo: "/logos/github.svg" },
+        { name:  "Jira", logo: "/logos/jira.svg" },
+        { name:  "Postman", logo: "/logos/postman.svg" },
+        { name:  "Docker", logo: "/logos/docker.svg" },
+        { name: "MS Office", logo: "/logos/microsoft-office.svg" },
+        { name:  "Adobe Photoshop", logo: "/logos/adobe-photoshop.svg" },
+        { name:  "FinalCut Pro", logo: "/logos/final-cut.svg" },
+    ],},
 ];
 
 export type Project = {

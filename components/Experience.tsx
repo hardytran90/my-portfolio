@@ -4,7 +4,7 @@ import { experience } from "@/lib/data";
 export default function Experience() {
   return (
     <section id="experience" className="mx-auto max-w-3xl px-6 py-24">
-      <h2 className="text-sm font-mono uppercase tracking-widest text-muted">
+      <h2 className="font-label text-2xl font-medium tracking-tight text-ink sm:text-3xl">
         Experience
       </h2>
 
@@ -17,7 +17,7 @@ export default function Experience() {
             <div className="flex h-10 w-10 items-center justify-center rounded-full bg-past/10 text-past">
               <Briefcase size={20} />
             </div>
-            <p className="mt-4 font-mono text-xs text-muted">{item.period}</p>
+            <p className="mt-4 font-label text-xs text-muted">{item.period}</p>
             <h3 className="mt-1 text-base font-medium text-ink">
               {item.title}
             </h3>

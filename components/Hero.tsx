@@ -21,7 +21,7 @@ export default function Hero() {
             <br />
             Now I build{" "}
             <span className="bg-[linear-gradient(100deg,var(--color-past)_0%,var(--color-future)_100%)] bg-clip-text text-transparent">
-                software.
+                softwares.
             </span>
             </h1>
 
