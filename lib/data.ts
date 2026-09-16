@@ -98,24 +98,26 @@ export type SkillGroup = {
 };
 
 export const skillGroups: SkillGroup[] = [
-  { label: "Languages", 
+  { label: "Languages & Frameworks", 
     items: [
         { name: "Python", slug: "python" },
         { name: "JavaScript", slug: "javascript" },
         { name: "C#", logo: "/logos/csharp.svg" },
-        { name: "SQL", slug: "mysql" },
+        { name: "MySQL", slug: "mysql" },
         { name: ".NET", slug: "dotnet" },
         { name: "HTML", slug: "html5" },
+        { name: "React", logo: "/logos/reactjs.svg" },
+        { name: "NodeJS", logo: "/logos/nodejs.svg" },
+        { name: "FastAPI", logo: "/logos/fastapi.svg" },
     ],},
   { label: "Cloud", 
     items: [
         { name: "MS Azure", logo: "/logos/microsoft-azure.svg" }
     ],},
-  { label: "Systems", 
-    items: [
-        { name: "Linux", slug: "linux" },
-        { name: "macOS", logo: "/logos/mac-os.svg" }
-    ],},
+//   { label: "Systems", 
+//     items: [
+//         { name: "macOS", logo: "/logos/mac-os.svg" }
+//     ],},
   { label: "Tools", 
     items: [
         { name:  "Github", logo: "/logos/github.svg" },
@@ -123,7 +125,6 @@ export const skillGroups: SkillGroup[] = [
         { name:  "Postman", logo: "/logos/postman.svg" },
         { name:  "Docker", logo: "/logos/docker.svg" },
         { name: "MS Office", logo: "/logos/microsoft-office.svg" },
-        { name:  "Adobe Photoshop", logo: "/logos/adobe-photoshop.svg" },
         { name:  "FinalCut Pro", logo: "/logos/final-cut.svg" },
     ],},
 ];

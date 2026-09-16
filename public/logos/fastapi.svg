@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="52.5 49.42 64.18 63.98">
+  <defs>
+    <mask id="bolt-cutout">
+      <circle cx="84.59" cy="81.41" r="33.5" fill="#fff"/>
+      <path fill="#000" d="M82.38 63.91l-6.42 14.25l-2.93 6.51l-6.42 14.25l29.54 -20.77h-13.86l20.27 -14.25z"/>
+    </mask>
+  </defs>
+  <circle cx="84.59" cy="81.41" r="32.05" fill="#8b92a8" mask="url(#bolt-cutout)"/>
+</svg>
