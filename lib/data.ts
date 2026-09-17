@@ -103,12 +103,15 @@ export const skillGroups: SkillGroup[] = [
         { name: "Python", slug: "python" },
         { name: "JavaScript", slug: "javascript" },
         { name: "C#", logo: "/logos/csharp.svg" },
-        { name: "MySQL", slug: "mysql" },
+        { name: "MySQL", logo: "/logos/mysql.svg" },
         { name: ".NET", slug: "dotnet" },
         { name: "HTML", slug: "html5" },
+        { name: "CSS", logo: "/logos/css.svg" },
+        { name: "Tailwind", logo: "/logos/tailwind.svg" },
         { name: "React", logo: "/logos/reactjs.svg" },
         { name: "NodeJS", logo: "/logos/nodejs.svg" },
         { name: "FastAPI", logo: "/logos/fastapi.svg" },
+
     ],},
   { label: "Cloud", 
     items: [
@@ -139,6 +142,9 @@ export type Project = {
   tools?: string[];
   duties?: string;
   outcome?: string;
+  github?: string;
+  cover?: string;
+  gallery?: string[];
 };
 
 export const projects: Project[] = [
@@ -151,12 +157,19 @@ export const projects: Project[] = [
       "A tool that helps instructors check for plagiarism across student submissions and run a deeper analysis of the code itself.",
     objective:
       "Give instructors a reliable way to check plagiarism in student submissions and get a deeper analysis of the code behind them.",
-    tools: ["Python", "JavaScript", "HTML", "CSS", "MySQL"],
+    tools: ["Python", "JavaScript", "HTML", "CSS", "MySQL", "FastAPI"],
     duties:
       "Part of a five-person team. I designed the backend system and database, then came back to review and refine the frontend near the end of the project.",
     outcome:
       "Delivered a working system with high-accuracy plagiarism detection. Presented and defended the design and results to project supervisors in the final report.",
-  },
+    github: "https://github.com/your-username/gradescope-analysis",
+    cover: "/public/project-photo/gradescope1.png",
+    gallery: [
+    "/projects/gradescope/screen-1.png",
+    "/projects/gradescope/screen-2.png",
+    "/projects/gradescope/screen-3.png",
+  ],
+    },
   {
     slug: "no-code-influxdb",
     title: "No-Code Solution for InfluxDB",
@@ -166,7 +179,7 @@ export const projects: Project[] = [
       "A simple, friendly real-time dashboard that lets researchers query InfluxDB data without writing code.",
     objective:
       "Give researchers a simple, friendly interface for working with real-time data in InfluxDB, without needing to write queries by hand.",
-    tools: ["Python", "HTML", "CSS", "JavaScript"],
+    tools: ["Python", "HTML", "CSS", "JavaScript", "PHP"],
     duties:
       "Part of a four-person team. I was responsible for the frontend system and the real-time dashboard the end user actually interacts with.",
     outcome:
@@ -188,4 +201,15 @@ export const socials = {
     github: "https://github.com/hardytran90",
     linkedin: "https://www.linkedin.com/in/hardy-tran/",
     discord: "https://discord.com/users/hardy_tran",
+};
+
+export const toolSlugs: Record<string, string> = {
+    Python: "python",
+    JavaScript: "javascript",
+    TypeScript: "typescript",
+    HTML: "html5",
+    CSS: "css3",
+    MySQL: "mysql",
+    React: "react",
+    "Next.js": "nextdotjs",
 };
