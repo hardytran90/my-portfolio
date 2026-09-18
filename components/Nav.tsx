@@ -22,11 +22,19 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        
+
+        <div className="flex items-center gap-3">
+          <a href="/resume/HardyTran_CV.pdf" 
+          download 
+          className="bridge-gradient border border-line rounded-full px-4 py-1.5 text-sm font-medium text-bg transition-transform hover:-translate-y-0.5 bg-[linear-gradient(100deg,var(--color-past)_0%,var(--color-future)_100%)]">
+            Download resume
+          </a>
+
           <a href="mailto:vinhhung90@gmail.com"
           className="rounded-full border border-line px-4 py-1.5 text-sm text-ink transition-colors hover:border-future/60 hover:text-future">
           Email me
         </a>
+        </div>
       </nav>
     </header>
   );
