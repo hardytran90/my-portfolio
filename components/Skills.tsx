@@ -1,7 +1,6 @@
 import { skillGroups } from "@/lib/data";
+import { getIconSrc } from "@/lib/icons";
 import Image from "next/image";
-
-const ICON_COLOR = "8b92a8";
 
 export default function Skills() {
   return (
@@ -18,31 +17,28 @@ export default function Skills() {
             </h3>
 
             <div className="mt-4 flex flex-wrap gap-6">
-              {group.items.map((item) => (
-                <div key={item.name} className="flex flex-col items-center gap-2">
-                  {item.slug ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={`https://cdn.simpleicons.org/${item.slug}/${ICON_COLOR}`}
-                      alt={item.name}
-                      className="h-10 w-10 object-contain"
-                    />
-                  ) : (
-                    <Image
-                      src={item.logo!}
-                      alt={item.name}
-                      width={40}
-                      height={40}
-                      className="h-10 w-10 object-contain"
-                    />
-                  )}
-                  <span className="text-xs text-muted">{item.name}</span>
+              {group.items.map((name) => {
+                const src = getIconSrc(name);
+                return (
+                  <div key={name} className="flex flex-col items-center gap-2">
+                    {src && (
+                      <Image
+                        src={src}
+                        alt={name}
+                        width={40}
+                        height={40}
+                        className="h-10 w-10 object-contain"
+                        unoptimized={src.startsWith("http")}
+                      />
+                    )}
+                  <span className="text-xs text-muted">{name}</span>
                 </div>
-              ))}
-            </div>
+                );
+              })}
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      ))}
+    </div>
+  </section>
   );
 }

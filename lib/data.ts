@@ -66,7 +66,7 @@ export const experience: ExperienceItem[] = [
     {
     period: "Apr 2025 — Current",
     title: "Food Service Assistant",
-    org: "Regis Aged Care, Burnside, Adelaide",
+    org: "Regis Aged Care, Adelaide",
     description:
       "Preparing and serving meals for residents while studying — steady, practical work in a multicultural team that also sharpened my English communication.",
   },
@@ -94,49 +94,20 @@ export type SkillItem = {
 
 export type SkillGroup = {
   label: string;
-  items: SkillItem[];
+  items: string[]; // just names — icon resolved via getIconSrc(name) from lib/icons.ts
 };
 
 export const skillGroups: SkillGroup[] = [
-  { label: "Languages & Frameworks", 
-    items: [
-        { name: "Python", slug: "python" },
-        { name: "JavaScript", slug: "javascript" },
-        { name: "C#", logo: "/logos/csharp.svg" },
-        { name: "MySQL", logo: "/logos/mysql.svg" },
-        { name: ".NET", slug: "dotnet" },
-        { name: "HTML", slug: "html5" },
-        { name: "CSS", logo: "/logos/css.svg" },
-        { name: "Tailwind", logo: "/logos/tailwind.svg" },
-        { name: "React", logo: "/logos/reactjs.svg" },
-        { name: "NodeJS", logo: "/logos/nodejs.svg" },
-        { name: "FastAPI", logo: "/logos/fastapi.svg" },
-
-    ],},
-  { label: "Cloud", 
-    items: [
-        { name: "MS Azure", logo: "/logos/microsoft-azure.svg" }
-    ],},
-//   { label: "Systems", 
-//     items: [
-//         { name: "macOS", logo: "/logos/mac-os.svg" }
-//     ],},
-  { label: "Tools", 
-    items: [
-        { name:  "Github", logo: "/logos/github.svg" },
-        { name:  "Jira", logo: "/logos/jira.svg" },
-        { name:  "Postman", logo: "/logos/postman.svg" },
-        { name:  "Docker", logo: "/logos/docker.svg" },
-        { name: "MS Office", logo: "/logos/microsoft-office.svg" },
-        { name:  "FinalCut Pro", logo: "/logos/final-cut.svg" },
-    ],},
+    { label: "Languages & Frameworks", items: ["Python", "JavaScript", "C#", ".NET", "MySQL", "HTML", "React", "NodeJS", "FastAPI"] },
+    { label: "Cloud", items: ["MS Azure"] },
+    { label: "Tools", items: ["Github", "Jira", "Postman", "Docker", "MS Office", "FinalCut Pro"] },
 ];
 
 export type Project = {
   slug: string;
   title: string;
   period: string;
-  status: "Distinction" | "High Distinction" | "Coming soon";
+  status: "Distinction" | "High Distinction" | "Coming soon" | "Improving";
   summary: string;
   objective?: string;
   tools?: string[];
@@ -163,11 +134,12 @@ export const projects: Project[] = [
     outcome:
       "Delivered a working system with high-accuracy plagiarism detection. Presented and defended the design and results to project supervisors in the final report.",
     github: "https://github.com/your-username/gradescope-analysis",
-    cover: "/public/project-photo/gradescope1.png",
+    cover: "/project-photo/gradescope1.png",
     gallery: [
-    "/projects/gradescope/screen-1.png",
-    "/projects/gradescope/screen-2.png",
-    "/projects/gradescope/screen-3.png",
+    "/project-photo/gradescope2.png",
+    "/project-photo/gradescope3.png",
+    "/project-photo/gradescope4.png",
+    "/project-photo/gradescope5.png",
   ],
     },
   {
@@ -184,6 +156,21 @@ export const projects: Project[] = [
       "Part of a four-person team. I was responsible for the frontend system and the real-time dashboard the end user actually interacts with.",
     outcome:
       "Delivered a working system meeting the client's core requirements, demonstrated live and confirmed working under the client supervisor's review.",
+  },
+  {
+    slug: "master-dashboard",
+    title: "Master Dashboard",
+    period: "Aug 2026 — Current",
+    status: "Improving",
+    summary:
+      "TBA.",
+    objective:
+      "TBA.",
+    tools: ["TypeScript", "React", "NextJS", "HTML", "Tailwind CSS"],
+    duties:
+      "TBA.",
+    outcome:
+      "TBA.",
   },
   {
     slug: "coming-soon",

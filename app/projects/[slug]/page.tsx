@@ -3,8 +3,9 @@ import { Database } from "lucide-react";
 import { getIconSrc } from "@/lib/icons";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { projects, toolSlugs } from "@/lib/data";
+import { projects } from "@/lib/data";
 import { FaGithub } from "react-icons/fa";
+import ProjectGallery from "@/components/ProjectGallery";
 
 
 export function generateStaticParams() {
@@ -45,32 +46,6 @@ export default async function ProjectDetail({ params }: Props) {
           <span className={statusStyle[project.status]}>{project.status}</span>
         </div>
 
-        <p className="mt-6 leading-relaxed text-muted">{project.summary}</p>
-
-        {project.github && (
-            <a href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm text-ink transition-colors hover:border-future/60 hover:text-future">
-            <FaGithub size={16} />
-            View on GitHub
-          </a>
-        )}
-
-            {project.cover && (
-          <div className="mt-6 h-[189px] w-full overflow-hidden rounded-xl border border-line">
-            <Image
-              src={project.cover}
-              alt={`${project.title} cover`}
-              width={800}
-              height={189}
-              className="h-full w-full object-cover"
-              priority
-            />
-          </div>
-        )}
-
-        <p className="mt-6 leading-relaxed text-muted">{project.summary}</p>
         {project.tools && (
           <div className="mt-6 flex flex-wrap gap-4">
             {project.tools.map((name) => {
@@ -96,6 +71,33 @@ export default async function ProjectDetail({ params }: Props) {
           </div>
         )}
 
+        <p className="mt-6 leading-relaxed text-muted">{project.summary}</p>
+
+        {project.github && (
+            <a href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center gap-2 rounded-full border border-line px-4 py-2 text-sm text-bg hover:border-future/60 hover:text-future bridge-gradient bg-[linear-gradient(100deg,var(--color-past)_0%,var(--color-future)_100%)]">
+            <FaGithub size={16} />
+            View project on GitHub
+          </a>
+        )}
+
+            {project.cover && (
+          <div className="mt-6 h-[189px] w-full overflow-hidden rounded-xl border border-line">
+            <Image
+              src={project.cover}
+              alt={`${project.title} cover`}
+              width={800}
+              height={189}
+              className="h-full w-full object-cover"
+              priority
+            />
+          </div>
+        )}
+
+        <p className="mt-6 leading-relaxed text-muted">{project.summary}</p>
+
         {project.objective && (
           <section className="mt-10">
             <h2 className="text-lg text-ink">Objective</h2>
@@ -120,23 +122,8 @@ export default async function ProjectDetail({ params }: Props) {
         {project.gallery && project.gallery.length > 0 && (
           <section className="mt-12 rounded-2xl border border-line p-6">
             <h2 className="text-lg text-ink">Gallery</h2>
-            <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-              {project.gallery.map((src, i) => (
-                <div
-                  key={src}
-                  className="aspect-video overflow-hidden rounded-lg border border-line"
-                >
-                  <Image
-                    src={src}
-                    alt={`${project.title} screenshot ${i + 1}`}
-                    width={400}
-                    height={225}
-                    className="h-full w-full object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-              ))}
-            </div>
-          </section>
+            <ProjectGallery images={project.gallery} title={project.title} />
+        </section>
         )}
       </div>
     </main>
