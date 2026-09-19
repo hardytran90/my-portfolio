@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { X, ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
 
@@ -40,6 +40,19 @@ export default function ProjectGallery({ images, title }: Props) {
     setScale(1);
     setOrigin({ x: 50, y: 50 });
   };
+
+  useEffect(() => {
+    if (openIndex === null) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "ArrowLeft") prev();
+        else if (e.key === "ArrowRight") next();
+        else if (e.key === "Escape") close();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [openIndex, images.length]);
 
   const updateOriginFromPointer = (clientX: number, clientY: number) => {
     const rect = imgWrapperRef.current?.getBoundingClientRect();
@@ -138,7 +151,7 @@ export default function ProjectGallery({ images, title }: Props) {
                 e.stopPropagation();
                 prev();
               }}
-              className="absolute left-4 text-white/70 hover:text-white"
+              className="absolute left-4 rounded-full bg-white/80 p-2 text-black hover:bg-white"
               aria-label="Previous image"
             >
               <ChevronLeft size={32} />
@@ -174,7 +187,7 @@ export default function ProjectGallery({ images, title }: Props) {
                 e.stopPropagation();
                 next();
               }}
-              className="absolute right-4 text-white/70 hover:text-white"
+              className="absolute right-4 rounded-full bg-white/80 p-2 text-black hover:bg-white"
               aria-label="Next image"
             >
               <ChevronRight size={32} />

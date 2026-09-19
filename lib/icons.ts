@@ -17,8 +17,8 @@ const iconLibrary: Record<string, IconEntry> = {
   MySQL: { logo: "/logos/mysql.svg" },
   ".NET": { slug: "dotnet" },
   HTML: { slug: "html5" },
-  React: { logo: "/logos/reactjs.svg" },
-  NodeJS: { logo: "/logos/nodejs.svg" },
+  ReactJS: { logo: "/logos/reactjs.svg" },
+  NodeJS: { slug: "nodedotjs" },
   FastAPI: { logo: "/logos/fastapi.svg" },
   "MS Azure": { logo: "/logos/microsoft-azure.svg" },
   Github: { logo: "/logos/github.svg" },
@@ -28,6 +28,7 @@ const iconLibrary: Record<string, IconEntry> = {
   "MS Office": { logo: "/logos/microsoft-office.svg" },
   "FinalCut Pro": { logo: "/logos/final-cut.svg" },
   "PHP": { logo: "/logos/php.svg"},
+  "Laravel": { slug: "laravel" },
   "CSS": { logo: "/logos/css.svg"}
 };
 

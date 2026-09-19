@@ -3,10 +3,11 @@ import Image from "next/image";
 
 export default function Education() {
     return (
-        <section id="education" className="mx-auto max-w-3xl px-6 py-24">
-      <h2 className="font-label text-2xl font-medium tracking-tight text-ink sm:text-3xl">
-        Education
-      </h2>
+        <section id="education" className="border-b border-line px-6 py-24">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="font-label text-2xl font-medium tracking-tight text-ink sm:text-3xl">
+              Education
+            </h2>
 
       <ol className="mt-10 space-y-10">
         {education.map((item) => (
@@ -36,6 +37,7 @@ export default function Education() {
           </li>
         ))}
       </ol>
+      </div>
     </section>
     );
 }
