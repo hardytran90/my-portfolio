@@ -33,8 +33,8 @@ const [open, setOpen] = useState(false);
         </ul>
 
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
-          <a href="/resume/HardyTran_CV.pdf" 
-          download 
+          <a href="https://drive.google.com/file/d/1eiEWe4KD2P_8uxffy_Hih99eZAv3eD3M/view?usp=sharing"
+          target="_blank" 
           className="bg-[linear-gradient(100deg,var(--color-past)_0%,var(--color-future)_100%)] whitespace-nowrap rounded-full px-3 py-1.5 text-xs font-medium text-bg transition-transform hover:-translate-y-0.5 sm:px-4 sm:text-sm">
             Download my resume
           </a>
