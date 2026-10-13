@@ -62,28 +62,39 @@ export type ExperienceItem = {
 };
 
 // Newest to Oldest 
-export const experience: ExperienceItem[] = [
+export const experience = [
     {
     period: "Apr 2025 — Current",
     title: "Food Service Assistant",
-    org: "Regis Aged Care, Adelaide",
+    org: "Regis Aged Care, Adelaide 🇦🇺",
     description:
       "Preparing and serving meals for residents while studying — steady, practical work in a multicultural team that also sharpened my English communication.",
+    logos: [
+      { src: "/logos/logo-regis.png", alt: "regis" },
+    ]
   },
   {
     period: "May 2017 — Mar 2023",
     title: "Event Planner",
-    org: "Vinteam Services Travel Corp, Ho Chi Minh City",
+    org: "Vinteam Services Travel Corp, Ho Chi Minh City 🇻🇳",
     description:
       "Planned travel and conference events for corporate clients: itineraries, program content, budgets and third-party vendors. Sat between client expectations and vendor cost management on high-value accounts.",
-  },
+    logos: [
+      { src: "/logos/logo-vin.png", alt: "vinteam" },
+    ]
+    },
   {
     period: "2011 — 2016",
     title: "Financial Specialist",
-    org: "Maritime Bank · ANZ Bank · Eximbank, Ho Chi Minh City",
+    org: "Maritime Bank · ANZ Bank · Eximbank, Ho Chi Minh City 🇻🇳",
     description:
       "Five years in banking and finance immediately after graduating — communication, problem-solving and working accurately under pressure.",
-  },
+    logos: [
+      { src: "/logos/logo-maritimebank.png", alt: "maritime bank" },
+      { src: "/logos/logo-anz.png", alt: "anz" },
+      { src: "/logos/logo-eximbank1.png", alt: "eximbank" },
+    ]
+    },
 ]
 
 export type SkillItem = {
