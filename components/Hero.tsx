@@ -26,7 +26,7 @@ export default function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
-            I'm Hardy — a software engineer in Adelaide.
+            I'm Hardy - a software engineer in Adelaide.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center gap-4">
